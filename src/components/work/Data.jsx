@@ -8,7 +8,7 @@ export const projectsData = [
   {
     id: 1,
     image: Work1,
-    title: "Web design",
+    title: "Gender Detection",
     category: "Data Science",
     demoLink: "https://www.google.com",
   },
