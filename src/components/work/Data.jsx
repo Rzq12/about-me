@@ -15,14 +15,14 @@ export const projectsData = [
   {
     id: 2,
     image: Work2,
-    title: "App movil",
-    category: "Data Analysis",
+    title: "Obesity Classification",
+    category: "Data Science",
     demoLink: "https://www.google.com",
   },
   {
     id: 3,
     image: Work3,
-    title: "Brand design",
+    title: "Rock Paper Scissors Classification",
     category: "Data Science",
     demoLink: "https://www.google.com",
   },
