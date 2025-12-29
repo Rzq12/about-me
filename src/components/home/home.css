@@ -89,6 +89,13 @@
   margin-left: 9.25rem;
 }
 
+.home__scroll-button--flex {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  column-gap: 0.25rem;
+}
+
 .wheel {
   animation: scroll 2s ease infinite;
 }
@@ -151,6 +158,10 @@
 
   .home__scroll {
     margin-left: 7.5rem;
+  }
+
+  .home__scroll-button--flex {
+    column-gap: 0.25rem;
   }
 }
 

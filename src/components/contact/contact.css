@@ -1,7 +1,5 @@
 .contact__container {
-  grid-template-columns: repeat(2, max-content);
   justify-content: center;
-  column-gap: 6rem;
   padding-bottom: 3rem;
 }
 
@@ -12,10 +10,17 @@
   margin-bottom: var(--mb-1-5);
 }
 
+.contact__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .contact__info {
   display: grid;
-  row-gap: 1rem;
-  grid-template-columns: 300px;
+  grid-template-columns: repeat(2, 280px);
+  gap: 1.5rem;
+  justify-content: center;
 }
 
 .contact__card {
@@ -106,34 +111,22 @@
 /*=============== BREAKPOINTS ===============*/
 /* For large devices */
 @media screen and (max-width: 992px) {
-  .contact__container {
-    grid-template-columns: 3rem;
+  .contact__info {
+    grid-template-columns: repeat(2, 250px);
   }
 }
 
 /* For medium devices */
 @media screen and (max-width: 768px) {
-  .contact__container {
-    grid-template-columns: 1fr;
-    row-gap: 3rem;
-  }
-
   .contact__info {
-    justify-content: center;
-  }
-
-  .contact__form {
-    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
 }
 
 @media screen and (max-width: 576px) {
   .contact__info {
     grid-template-columns: 1fr;
-  }
-
-  .contact__form {
-    width: 100%;
   }
 }
 

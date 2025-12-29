@@ -1,7 +1,7 @@
 import React from "react";
 import "./about.css";
 import AboutImg from "../../assets/about.jpeg";
-import CV from "../../assets/John-Cv.pdf";
+import CV from "../../assets/Riezqi_CV.pdf";
 import Info from "./Info";
 
 const About = () => {
@@ -15,15 +15,14 @@ const About = () => {
         <div className="about__data">
           <Info />
           <p className="about__description">
-            Data Enthusiast with a passion for uncovering insights and solving
-            problems through data. I specialize in analyzing complex datasets,
-            creating compelling visualizations, and building data-driven
-            solutions that make an impact.
+            Data Analytics enthusiast with hands-on experience in Python, SQL,
+            and Power BI, focusing on exploratory analysis, predictive modeling,
+            and business-driven insights.
           </p>
           <a download="" href={CV} className="button button-flex">
             Download CV
             <svg
-              class="button__icon"
+              className="button__icon"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"

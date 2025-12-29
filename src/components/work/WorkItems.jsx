@@ -11,7 +11,7 @@ const WorksItem = ({ item }) => {
         rel="noopener noreferrer"
         className="work__button"
       >
-        demo <i className="bx bx-right-arrow-alt work__button-icon"></i>
+        Github Link <i className="bx bx-right-arrow-alt work__button-icon"></i>
       </a>
     </div>
   );

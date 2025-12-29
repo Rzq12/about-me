@@ -4,15 +4,15 @@ const Info = () => {
   return (
     <div className="about__info grid">
       <div className="about__box">
-        <i class="bx bx-award about__icon"></i>
-        <h3 className="about__title">experience</h3>
-        <span className="about__subtitle">1 years</span>
+        <i className="bx bx-award about__icon"></i>
+        <h3 className="about__title">Experience</h3>
+        <span className="about__subtitle">1+ year Academic Project-Based</span>
       </div>
 
       <div className="about__box">
-        <i class="bx bxs-briefcase about__icon"></i>
+        <i className="bx bxs-briefcase about__icon"></i>
         <h3 className="about__title">Completed</h3>
-        <span className="about__subtitle">3 projects</span>
+        <span className="about__subtitle">5+ projects</span>
       </div>
     </div>
   );

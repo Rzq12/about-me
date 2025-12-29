@@ -11,9 +11,10 @@
 }
 
 .about__info {
-  grid-template-columns: repeat(3, 140px);
-  gap: 0.5rem;
+  grid-template-columns: repeat(2, 160px);
+  gap: 1rem;
   margin-bottom: var(--mb-2);
+  justify-content: flex-start;
 }
 
 .about__box {
@@ -21,7 +22,7 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 0.75rem;
   text-align: center;
-  padding: 1rem 1.25rem;
+  padding: 1.25rem 1rem;
 }
 
 .about__icon {
@@ -31,12 +32,16 @@
 }
 
 .about__title {
-  font-size: var(--small-font-size);
+  font-size: var(--normal-font-size);
   font-weight: var(--font-medium);
+  line-height: 1.4;
+  letter-spacing: 0.02rem;
+  margin-bottom: var(--mb-0-25);
 }
 
 .about__subtitle {
   font-size: var(--small-font-size);
+  line-height: 1.5;
 }
 
 .about__description {
@@ -77,7 +82,7 @@
 /* For medium devices */
 @media screen and (max-width: 576px) {
   .about__info {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .about__description {
@@ -88,6 +93,6 @@
 /* For small devices */
 @media screen and (max-width: 350px) {
   .about__info {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
 }

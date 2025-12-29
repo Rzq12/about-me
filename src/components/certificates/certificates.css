@@ -1,0 +1,109 @@
+.certificates__container {
+  justify-content: center;
+  padding-bottom: 3rem;
+}
+
+.certificates__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.certificates__list {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.certificates__card {
+  background-color: var(--container-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.certificates__card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.certificates__icon {
+  font-size: 2rem;
+  color: var(--title-color);
+  margin-bottom: var(--mb-0-5);
+}
+
+.certificates__name {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+  margin-bottom: var(--mb-0-25);
+  color: var(--title-color);
+}
+
+.certificates__issuer {
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+  margin-bottom: var(--mb-0-5);
+  display: block;
+}
+
+.certificates__year {
+  font-size: var(--smaller-font-size);
+  color: var(--text-color-light);
+  margin-bottom: var(--mb-0-75);
+  display: block;
+}
+
+.certificates__link {
+  font-size: var(--small-font-size);
+  color: var(--title-color);
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.25rem;
+  transition: 0.3s;
+}
+
+.certificates__link:hover {
+  color: var(--title-color-dark);
+}
+
+.certificates__link-icon {
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.certificates__link:hover .certificates__link-icon {
+  transform: translateX(0.25rem);
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For large devices */
+@media screen and (max-width: 992px) {
+  .certificates__list {
+    grid-template-columns: repeat(2, 280px);
+  }
+}
+
+/* For medium devices */
+@media screen and (max-width: 768px) {
+  .certificates__list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .certificates__list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* For small devices */
+@media screen and (max-width: 350px) {
+  .certificates__card {
+    padding: 1rem;
+  }
+}
