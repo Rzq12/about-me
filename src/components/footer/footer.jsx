@@ -14,7 +14,7 @@ export const Footer = () => {
             </a>
           </li>
           <li>
-            <a href="#portofolio" className="footer__link">
+            <a href="#portfolio" className="footer__link">
               Projects
             </a>
           </li>
@@ -26,7 +26,7 @@ export const Footer = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <i class="bx bxl-instagram"></i>
+            <i className="bx bxl-instagram"></i>
           </a>
 
           <a
@@ -35,7 +35,7 @@ export const Footer = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <i class="bx bxl-github"></i>
+            <i className="bx bxl-github"></i>
           </a>
         </div>
         <span className="footer__copy">

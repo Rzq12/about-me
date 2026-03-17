@@ -7,7 +7,7 @@ const Backend = () => {
       <div className="skills__box">
         <div className="skills__group">
           <div className="skills__data">
-            <i class="bx bx-badge-check"></i>
+            <i className="bx bx-badge-check"></i>
             <div>
               <h3 className="skills__name">Python</h3>
               <span className="skills__level">Intermediate</span>
@@ -15,7 +15,7 @@ const Backend = () => {
           </div>
 
           <div className="skills__data">
-            <i class="bx bx-badge-check"></i>
+            <i className="bx bx-badge-check"></i>
             <div>
               <h3 className="skills__name">R</h3>
               <span className="skills__level">Intermediate</span>
@@ -23,7 +23,7 @@ const Backend = () => {
           </div>
 
           <div className="skills__data">
-            <i class="bx bx-badge-check"></i>
+            <i className="bx bx-badge-check"></i>
             <div>
               <h3 className="skills__name">SQL</h3>
               <span className="skills__level">Intermediate</span>
@@ -31,7 +31,7 @@ const Backend = () => {
           </div>
 
           <div className="skills__data">
-            <i class="bx bx-badge-check"></i>
+            <i className="bx bx-badge-check"></i>
             <div>
               <h3 className="skills__name">Tableu</h3>
               <span className="skills__level">Intermediate</span>
