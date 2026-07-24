@@ -5,6 +5,10 @@ import Work4 from "../../assets/work4.png";
 import Work5 from "../../assets/work5.jpg";
 import Work6 from "../../assets/work6.png";
 import Work7 from "../../assets/work7.png";
+import Work8 from "../../assets/work8.png";
+import Work9 from "../../assets/work9.jpg";
+import Work10 from "../../assets/work10.jpg";
+import Work11 from "../../assets/work11.png";
 
 export const projectsData = [
   {
@@ -62,6 +66,34 @@ export const projectsData = [
     category: "Data Science/Data Analysis",
     demoLink:
       "https://github.com/Rzq12/College-Project/tree/main/Hotel-Management-Database-SQL",
+  },
+  {
+    id: 8,
+    image: Work11,
+    title: "Research RAG",
+    category: "Machine Learning",
+    demoLink: "https://github.com/Rzq12/ResearchRAG",
+  },
+  {
+    id: 9,
+    image: Work10,
+    title: "Vehicle Counting",
+    category: "Machine Learning",
+    demoLink: "https://github.com/Rzq12/Vehicle-Counting",
+  },
+  {
+    id: 10,
+    image: Work9,
+    title: "Emotion Classifier",
+    category: "Machine Learning",
+    demoLink: "https://github.com/Rzq12/Emotion-Classifier",
+  },
+  {
+    id: 11,
+    image: Work8,
+    title: "AI Recipe & Meal Plan",
+    category: "Machine Learning",
+    demoLink: "https://github.com/DREAM-TEAM-2026/AI-ENGINEER",
   },
 ];
 
