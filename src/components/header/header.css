@@ -21,6 +21,13 @@
   font-weight: var(--font-medium);
 }
 
+.nav__toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
 .nav__list {
   display: flex;
   column-gap: 2rem;

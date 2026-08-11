@@ -1,8 +1,5 @@
-import React from "react";
-import { useEffect } from "react";
-import { useState } from "react";
-import { projectsData } from "./Data";
-import { projectsNav } from "./Data";
+import React, { useEffect, useState } from "react";
+import { projectsData, projectsNav } from "./Data";
 import WorkItems from "./WorkItems";
 
 const Works = () => {
@@ -25,6 +22,7 @@ const Works = () => {
     setItem({ name: e.target.textContent });
     setActive(index);
   };
+
   return (
     <div>
       <div className="work__filters">

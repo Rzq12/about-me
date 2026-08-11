@@ -3,43 +3,62 @@ import "./contact.css";
 
 const Contact = () => {
   return (
-    <section className="contact section" id="contact">
-      <h2 className="section__title">Get in touch</h2>
-      <span className="section__subtitle">Contact Me</span>
+    <section className="contact section" id="contact" aria-label="Contact">
+      <h2 className="section__title">Let's build something with AI</h2>
+      <p className="contact__tagline">
+        Open to AI Engineer, Machine Learning Engineer, and AI/ML internship
+        opportunities.
+      </p>
 
       <div className="contact__container container grid">
-        <div className="contact__content">
-          <div className="contact__info">
-            <div className="contact__card">
-              <i className="bx bx-mail-send contact__card-icon"></i>
-              <h3 className="contact__card-title">Email</h3>
-              <span className="contact__card-data">
-                riezqi.dhermatia@gmail.com
-              </span>
+        <div className="contact__info">
+          <a
+            href="mailto:riezqi.dhermatia@gmail.com"
+            className="contact__card"
+            aria-label="Send email"
+          >
+            <i className="bx bx-mail-send contact__card-icon" aria-hidden="true"></i>
+            <h3 className="contact__card-title">Email</h3>
+            <span className="contact__card-data">
+              riezqi.dhermatia@gmail.com
+            </span>
+            <span className="contact__button">
+              Send message
+              <i className="bx bx-right-arrow-alt contact__button-icon" aria-hidden="true"></i>
+            </span>
+          </a>
 
-              <a
-                href="mailto:riezqi.dhermatia@gmail.com"
-                className="contact__button"
-              >
-                write me{" "}
-                <i className="bx bx-right-arrow-alt contact__button-icon"></i>
-              </a>
-            </div>
+          <a
+            href="https://www.linkedin.com/in/riezqidr/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact__card"
+            aria-label="Visit LinkedIn profile"
+          >
+            <i className="bx bxl-linkedin contact__card-icon" aria-hidden="true"></i>
+            <h3 className="contact__card-title">LinkedIn</h3>
+            <span className="contact__card-data">linkedin.com/in/riezqidr</span>
+            <span className="contact__button">
+              View Profile
+              <i className="bx bx-right-arrow-alt contact__button-icon" aria-hidden="true"></i>
+            </span>
+          </a>
 
-            <div className="contact__card">
-              <i className="bx bxl-whatsapp contact__card-icon"></i>
-              <h3 className="contact__card-title">Whatsapp</h3>
-              <span className="contact__card-data">+62 895-3839-43900</span>
-
-              <a
-                href="https://api.whatsapp.com/send?phone=62895383943900&text=Hello, more information!"
-                className="contact__button"
-              >
-                write me{" "}
-                <i className="bx bx-right-arrow-alt contact__button-icon"></i>
-              </a>
-            </div>
-          </div>
+          <a
+            href="https://github.com/Rzq12"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact__card"
+            aria-label="Visit GitHub profile"
+          >
+            <i className="bx bxl-github contact__card-icon" aria-hidden="true"></i>
+            <h3 className="contact__card-title">GitHub</h3>
+            <span className="contact__card-data">github.com/Rzq12</span>
+            <span className="contact__button">
+              View Code
+              <i className="bx bx-right-arrow-alt contact__button-icon" aria-hidden="true"></i>
+            </span>
+          </a>
         </div>
       </div>
     </section>

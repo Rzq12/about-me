@@ -1,7 +1,23 @@
-import React from "react";
-// import "./home.css";
+import React, { useState, useEffect } from "react";
+
+const keywords = [
+  "AI Engineer",
+  "Machine Learning",
+  "Data Enthusiast",
+  "Problem Solver",
+  "Collaborative Team Player",
+];
 
 const Data = () => {
+  const [currentKeyword, setCurrentKeyword] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentKeyword((prev) => (prev + 1) % keywords.length);
+    }, 2000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="home__data">
       <h1 className="home__title">
@@ -13,6 +29,7 @@ const Data = () => {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
           className="home__hand"
+          aria-hidden="true"
         >
           <path
             d="M25.4995 32.0305L31.3495 33.1555L36.1495 8.48051C36.4495 6.83051 35.3995 5.18051 33.8245 4.88051C32.1745 4.58051 30.5995 5.70551 30.2995 7.35551L25.4995 32.0305Z"
@@ -56,14 +73,14 @@ const Data = () => {
           ></path>
         </svg>
       </h1>
-      <h3 className="home__subtitle">ML & Data Enthusiast</h3>
+      <p className="home__subtitle">{keywords[currentKeyword]}</p>
       <p className="home__description">
-        Hi, I'm Riezqi, a ML & Data Enthusiast based in Surabaya. I'm deeply
-        passionate about exploring the intersection of data, technology, and
-        innovation.
+        AI/ML Engineer & Statistics graduate from Universitas Airlangga.
+        Building production ML systems — RAG, computer vision, NLP — with
+        real deployments.
       </p>
-      <a href="#contact" className="button button--flex">
-        Say Hello
+      <a href="/#contact" className="button button--flex">
+        Let's Work Together!
         <svg
           className="button__icon"
           xmlns="http://www.w3.org/2000/svg"
@@ -71,6 +88,7 @@ const Data = () => {
           height="24"
           viewBox="0 0 24 24"
           fill="none"
+          aria-hidden="true"
         >
           <path
             d="M14.2199 21.9352C13.0399 21.9352 11.3699 21.1052 10.0499 17.1352L9.32988 14.9752L7.16988 14.2552C3.20988 12.9352 2.37988 11.2652 2.37988 10.0852C2.37988 8.91525 3.20988 7.23525 7.16988 5.90525L15.6599 3.07525C17.7799 2.36525 19.5499 2.57525 20.6399 3.65525C21.7299 4.73525 21.9399 6.51525 21.2299 8.63525L18.3999 17.1252C17.0699 21.1052 15.3999 21.9352 14.2199 21.9352ZM7.63988 7.33525C4.85988 8.26525 3.86988 9.36525 3.86988 10.0852C3.86988 10.8052 4.85988 11.9052 7.63988 12.8252L10.1599 13.6652C10.3799 13.7352 10.5599 13.9152 10.6299 14.1352L11.4699 16.6552C12.3899 19.4352 13.4999 20.4252 14.2199 20.4252C14.9399 20.4252 16.0399 19.4352 16.9699 16.6552L19.7999 8.16525C20.3099 6.62525 20.2199 5.36525 19.5699 4.71525C18.9199 4.06525 17.6599 3.98525 16.1299 4.49525L7.63988 7.33525Z"
@@ -82,6 +100,15 @@ const Data = () => {
           ></path>
         </svg>
       </a>
+
+      {/* 3D Geometric Shapes */}
+      <div className="home__shapes" aria-hidden="true">
+        <div className="home__shape home__shape--pyramid"></div>
+        <div className="home__shape home__shape--sphere"></div>
+        <div className="home__shape home__shape--cylinder"></div>
+        <div className="home__shape home__shape--star"></div>
+        <div className="home__shape home__shape--cube"></div>
+      </div>
     </div>
   );
 };

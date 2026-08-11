@@ -160,6 +160,11 @@ img {
   background-color: var(--title-color-dark);
 }
 
+.button:focus-visible {
+  outline: 2px solid var(--title-color);
+  outline-offset: 2px;
+}
+
 .button__icon {
   margin-left: var(--mb-0-5);
 }
@@ -167,6 +172,31 @@ img {
 .button--flex {
   display: inline-flex;
   align-items: center;
+}
+
+/*=============== FOCUS STYLES ===============*/
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--title-color);
+  outline-offset: 2px;
+  border-radius: 0.25rem;
+}
+
+/*=============== SKIP TO CONTENT ===============*/
+.skip-to-content {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  background: var(--title-color);
+  color: var(--container-color);
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  z-index: 9999;
+  font-weight: var(--font-medium);
+}
+
+.skip-to-content:focus {
+  top: 0.5rem;
 }
 
 /*=============== BREAKPOINTS ===============*/
