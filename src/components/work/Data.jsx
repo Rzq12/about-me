@@ -9,6 +9,7 @@ import Work8 from "../../assets/work8.png";
 import Work9 from "../../assets/work9.jpg";
 import Work10 from "../../assets/work10.jpg";
 import Work11 from "../../assets/work11.png";
+import Work12 from "../../assets/work12.jpg";
 
 export const projectsData = [
   {
@@ -682,6 +683,76 @@ export const projectsData = [
     demo: null,
     github:
       "https://github.com/Rzq12/College-Project/tree/main/Hotel-Management-Database-SQL",
+  },
+  {
+    id: 12,
+    slug: "indonesia-economic-pipeline",
+    image: Work12,
+    title: "Indonesia Economic Data Pipeline",
+    category: "Data Science / Data Analysis",
+    tagline:
+      "End-to-end ETL pipeline extracting Indonesian economic data from the World Bank API into a PostgreSQL star-schema warehouse, served via a Streamlit dashboard.",
+    overview: {
+      what: "A full data engineering pipeline that extracts Indonesian economic indicators (GDP, inflation, unemployment, population) from the free World Bank API, cleans and validates them, loads them into a PostgreSQL star-schema warehouse, and visualizes them in a Streamlit dashboard — all orchestrated with Prefect and deployed on Supabase + GitHub Actions + Streamlit Cloud.",
+      problem:
+        "Indonesian economic data is scattered across years and formats. Manual collection and cleaning doesn't scale — a reproducible ETL pipeline automates extraction, validation, warehousing, and visualization so trends are always fresh and explorable.",
+      why: "Built to master the complete data engineering stack — API extraction, data cleaning with validation, star-schema modeling, orchestration, and dashboarding — while producing a genuinely useful economic monitoring tool.",
+    },
+    features: [
+      {
+        name: "World Bank API Extraction",
+        desc: "Pulls GDP growth, inflation, unemployment, and population data from 2000–2024 via the free World Bank API (no API key), with Pydantic-validated raw models.",
+      },
+      {
+        name: "Star-Schema Data Warehouse",
+        desc: "PostgreSQL schema with dim_year, dim_country, dim_indicator dimension tables and a fact_economic fact table for analytics-ready querying.",
+      },
+      {
+        name: "Prefect Orchestration",
+        desc: "Task-based ETL flows with retries (3x backoff) for flaky API extraction, decoupled extract/transform/load tasks.",
+      },
+      {
+        name: "Idempotent Daily Pipeline",
+        desc: "UNIQUE(year, country, indicator) constraint + ON CONFLICT DO NOTHING upserts ensure daily re-runs never duplicate data.",
+      },
+      {
+        name: "Streamlit Dashboard",
+        desc: "KPI cards, year-range filters, indicator selectors, and Plotly line/bar charts for GDP, inflation, unemployment, and population trends.",
+      },
+    ],
+    tech: ["Python", "Pandas", "Prefect", "PostgreSQL", "SQLAlchemy", "Pydantic", "Streamlit", "Plotly", "Docker", "Supabase", "GitHub Actions"],
+    architecture: [
+      "World Bank API (free, no auth)",
+      "Extract (requests + Pydantic models)",
+      "Transform (Pandas cleaning + range validation)",
+      "Load (SQLAlchemy bulk upsert)",
+      "Star Schema (PostgreSQL)",
+      "Prefect Orchestration (retries + batching)",
+      "Streamlit Dashboard (Plotly)",
+    ],
+    results: {
+      "Indicators": "4 (GDP, inflation, unemployment, population)",
+      "Coverage": "2000–2024 (25 years)",
+      "Warehouse": "Star schema (PostgreSQL)",
+      "Schedule": "Daily (GitHub Actions cron)",
+    },
+    engineering: [
+      {
+        title: "Connection Pooler Workaround",
+        desc: "Supabase's direct database host is IPv6-only, unreachable from GitHub Actions and Streamlit Cloud runners. Routed through Supavisor's IPv4 connection pooler (aws-0-ap-northeast-2.pooler.supabase.com).",
+      },
+      {
+        title: "Idempotent Upserts",
+        desc: "Added a UNIQUE(year_id, country_id, indicator_id) constraint with ON CONFLICT DO NOTHING so the daily cron can re-run safely without duplicating fact rows.",
+      },
+      {
+        title: "Lazy Engine + SSL",
+        desc: "Database engine initializes lazily and supports a single DATABASE_URL (managed Postgres) with sslmode=require, or per-variable DB_* config for local Docker — one code path for both.",
+      },
+    ],
+    deployment: "Supabase + GitHub Actions + Streamlit Cloud",
+    demo: "https://indonesia-economic-pipeline.streamlit.app/",
+    github: "https://github.com/Rzq12/indonesia-economic-pipeline",
   },
 ];
 
